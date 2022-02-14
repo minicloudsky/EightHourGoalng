@@ -20,7 +20,7 @@ func main() {
 	fmt.Printf("type of a = %T\n", a)
 	// 方法二: 声明一个变量，初始化一个值
 	var b int = 100
-	fmt.Printf("b= %T\n", b)
+	fmt.Println("b= %T\n", b)
 	
 	var user string = "tony"
 	fmt.Println("user ", user)
@@ -50,4 +50,6 @@ func main() {
 		bbb string = "bbb"
 	)
 	fmt.Println(aaa,bbb)
+	fmt.Printf("cc = %s, type of cc = %T\n", bb,bb)
+
 }
