@@ -1,0 +1,21 @@
+syntax = "proto3"; // 使用proto3
+
+package person;
+
+option go_package="./;proto";
+
+message Home {
+    repeated Person persons = 1;
+    message V {
+        string name = 1;
+        string age = 2;
+    }
+}
+
+message Person {
+    string name = 1;
+    int32 age = 2;
+    bool sex = 3;
+    repeated string test = 4; // repeated会将该字段转化成对应类型的切片 []string
+    map<string, string> test_map =5;
+}

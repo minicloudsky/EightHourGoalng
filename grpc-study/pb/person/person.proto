@@ -1,0 +1,67 @@
+syntax="proto3";
+
+package person;
+
+option go_package="github.com/minicloudsky/grpc-study/pb/person;person";
+
+import "home/home.proto";
+
+message Home {
+  repeated Person persons = 1;
+  message V {
+    string name = 1;
+  }
+  V v = 2;
+  reserved "user_id"; // 保留关键字
+}
+
+message Person {
+  string name = 1;
+  int32 age = 2;
+  bool sex = 3;
+  repeated string test = 4;
+  map <string,string> test_map = 5;
+  enum Country { // ，枚举
+    CHINA = 0;
+    JAPAN = 1;
+    KOREA = 2;
+    SINGAPORE = 3;
+  }
+  enum Fruit { // ，枚举
+    option allow_alias = true;
+    APPLE = 0;
+    BANANA = 1;
+    GRAPE = 1;
+    WATERMELON = 3;
+  }
+  oneof TestOneOF {
+    string one = 10;
+    string two = 11;
+    string three = 12;
+  }
+  home.Home i_home = 9;
+}
+
+message UserRequest {
+  int32  page =1;
+  int32 pageSize = 2;
+  string search = 3;
+}
+
+message UserResponse {
+  message Data {
+    repeated string data = 1;
+    int32  code = 2;
+    string message = 3;
+  }
+}
+service UserService {
+  rpc GetUser(UserRequest) returns (UserResponse);
+}
+
+service SearchService {
+  rpc Search(Person) returns (Person); // 传统的即时响应
+  rpc SearchIn(stream Person) returns (Person); // 入参为流
+  rpc SearchOut(Person) returns (stream Person); // 出参为流
+  rpc SearchIO(stream Person) returns (stream Person); // 出入均为流
+}
