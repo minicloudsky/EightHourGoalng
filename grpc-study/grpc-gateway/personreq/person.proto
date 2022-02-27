@@ -4,7 +4,8 @@ package person;
 
 option go_package="github.com/minicloudsky/golang-in-action/grpc-study/pb/person;person";
 
-import "google/api/"
+import "google/api/annotations.proto";
+
 
 message PersonReq {
   string name  =1;
@@ -16,9 +17,10 @@ message PersonRes {
 }
 
 service SearchService {
-  rpc Search(PersonReq) returns (PersonRes); // 传统的即时响应
-  option (google.api.http) = {
-            post: "/v1/example/echo"
-            body: "*"
-          };
+  rpc Search(PersonReq) returns (PersonRes){
+    option (google.api.http) = {
+      post: "/api/person"
+      body: "*"
+    };
+  };
 }

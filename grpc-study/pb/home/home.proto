@@ -2,7 +2,7 @@ syntax="proto3";
 
 package home;
 
-option go_package="github.com/minicloudsky/grpc-study/home/home;home";
+option go_package="github.com/minicloudsky/golang-in-action/grpc-study/home/home;home";
 
 message Home {
   string home_num = 1;
