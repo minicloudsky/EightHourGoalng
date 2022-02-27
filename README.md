@@ -1,2 +1,1 @@
-# EightHourGoalng
-8h golang
+# Golang in action
