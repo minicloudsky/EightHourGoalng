@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 // func main() {
 // 	var number = make([]int, 3,5)
 // 	fmt.Printf("len: %d, cap: %d\n", len(number), cap(number))
@@ -15,7 +13,7 @@ import "fmt"
 // 	fmt.Printf("len: %d, cap: %d\n", len(number), cap(number))
 // 	number = append(number, 4)
 // 	fmt.Printf("len: %d, cap: %d\n", len(number), cap(number))
-	
+
 // 	var numbers  = make([]int,3)
 // 	fmt.Printf("len: %d, cap: %d\n", len(numbers), cap(numbers))
 // 	numbers = append(numbers, 1)
