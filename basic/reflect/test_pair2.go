@@ -1,6 +1,6 @@
 package main
 
-// func main(){
+// function main(){
 // 	// tty: pair<type:*os.File, value:"/dev/tty" 文件描述符>
 // 	tty, err := os.OpenFile("/dev/tty", os.O_RDWR, 0)
 // 	if err !=nil {

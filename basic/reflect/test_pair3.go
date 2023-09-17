@@ -11,11 +11,10 @@ type Writer interface {
 }
 
 // 具体类型
-type  Book struct {
-
+type Book struct {
 }
 
-func (this *Book) ReadBook () {
+func (this *Book) ReadBook() {
 	fmt.Println("Read a book!")
 }
 
@@ -23,7 +22,7 @@ func (this *Book) WriteBook() {
 	fmt.Println("Write a book!")
 }
 
-// func main() {
+// function main() {
 // 	// b: pair<type:Book,value:book{}地址>
 // 	b := &Book{}
 // 	var r Reader

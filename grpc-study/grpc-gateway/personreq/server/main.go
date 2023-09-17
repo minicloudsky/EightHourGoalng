@@ -25,7 +25,7 @@ func (*personServe) Search(ctx context.Context, req *person.PersonReq) (*person.
 	return res, nil
 }
 
-//func (*personServe) SearchIn(server person.SearchService_SearchInServer) error {
+//function (*personServe) SearchIn(server person.SearchService_SearchInServer) error {
 //
 //	for {
 //		req, err := server.Recv()
@@ -42,7 +42,7 @@ func (*personServe) Search(ctx context.Context, req *person.PersonReq) (*person.
 //	return nil
 //
 //}
-//func (*personServe) SearchOut(req *person.PersonReq, server person.SearchService_SearchOutServer) error {
+//function (*personServe) SearchOut(req *person.PersonReq, server person.SearchService_SearchOutServer) error {
 //
 //	name := req.Name
 //	for i := 0; i < 10; i++ {
@@ -57,10 +57,10 @@ func (*personServe) Search(ctx context.Context, req *person.PersonReq) (*person.
 //	}
 //	return nil
 //}
-//func (*personServe) SearchIO(server person.SearchService_SearchIOServer) error {
+//function (*personServe) SearchIO(server person.SearchService_SearchIOServer) error {
 //	str := make(chan string)
 //	c := 0
-//	go func() {
+//	go function() {
 //		for {
 //			req, err := server.Recv()
 //			fmt.Println("req: ", req)

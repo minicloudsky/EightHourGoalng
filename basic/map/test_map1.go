@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// func main() {
+// function main() {
 // 	// 声明 myMap1是一种map类型，key是string，value是string
 // 	var myMap1 map[string]string
 // 	if myMap1 == nil {

@@ -10,7 +10,7 @@ func reflectNum(arg interface{}) {
 	fmt.Println("value: ", reflect.ValueOf(arg))
 }
 
-// func main() {
+// function main() {
 // 	var num float64 = 3.1415926
 // 	reflectNum(num)
 // }

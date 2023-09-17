@@ -1,6 +1,6 @@
 package main
 
-// func main() {
+// function main() {
 // 	var number = make([]int, 3,5)
 // 	fmt.Printf("len: %d, cap: %d\n", len(number), cap(number))
 // 	// 向numbers 切片追加一个元素1，numbers len =4,[0,0,0,1], cap = 5

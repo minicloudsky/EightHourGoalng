@@ -2,15 +2,15 @@ package main
 
 import "fmt"
 
-func printArray(myArray []int){
+func printArray(myArray []int) {
 	// 值拷贝
-	for index,value := range myArray {
-		fmt.Println("index= ",index,",value= ",value)
+	for index, value := range myArray {
+		fmt.Println("index= ", index, ",value= ", value)
 	}
 	myArray[0] = 1000
 }
 
-// func main(){
+// function main(){
 // 	var myArray0[10]int
 // 	myArray2 := [10]int{1,2,3,4}
 // 	myArray3 := [4]int{11,22,33,44}

@@ -475,3 +475,31 @@ func TestDistinct(t *testing.T) {
 	db.Model(&APIRequestRecord{}).Distinct("api_name", "method").Order("api_name desc,method ").Find(&result)
 	fmt.Println("result: ", result)
 }
+
+func TestScan(t *testing.T) {
+	db := NewDB()
+	var records []APIRequestRecord
+	db.Model(APIRequestRecord{}).Where("id> ?", 95000).Scan(&records)
+	fmt.Println(records)
+}
+
+func TestCount(t *testing.T) {
+	db := NewDB()
+	var count int64
+	db.Model(APIRequestRecord{}).Count(&count)
+	fmt.Println("count: ", count)
+}
+
+func TestUpdate(t *testing.T) {
+	db := NewDB()
+	res := db.Model(APIRequestRecord{}).Where("id> ?", 9591542).Update("api_name", "test update").Commit()
+	fmt.Println(res.Error, res.RowsAffected)
+	var record APIRequestRecord
+	db.Model(APIRequestRecord{}).First(&record)
+	record.APIName = "测试更新单个列"
+	fmt.Println(record.ID)
+	res2 := db.Model(&record).Update("api_name", "hello").Commit()
+	fmt.Println("res2: ", res2)
+	deleteRes := db.Delete(&record).Commit()
+	fmt.Println("deleteRes: ", deleteRes)
+}

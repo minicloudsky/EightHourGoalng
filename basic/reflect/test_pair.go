@@ -1,6 +1,6 @@
 package main
 
-// func main() {
+// function main() {
 // 	var a string
 // 	// pair <statictype:string,value:"minicloudsky">
 // 	a = "minicloudsky"

@@ -2,7 +2,7 @@ package main
 
 // import "fmt"
 
-// func main(){
+// function main(){
 // 	// 声明slice1 是一个切片，并且初始化，默认值是1,2,3，长度len是3
 // 	// slice1 := []int{1,2,3}
 // 	// 声明slice1是一个切片，但是并没有给slice分配空间

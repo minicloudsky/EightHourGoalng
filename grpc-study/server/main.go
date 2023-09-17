@@ -13,17 +13,17 @@ package main
 //	hellogrpc.UnimplementedHelloGRPCServer
 //}
 //
-//func (s *server) apply(options *interface{}) {
+//function (s *server) apply(options *interface{}) {
 //	//TODO implement me
 //	panic("implement me")
 //}
 //
-//func (s *server) SayHi(ctx context.Context, req *hellogrpc.Req) (res *hellogrpc.Res, err error) {
+//function (s *server) SayHi(ctx context.Context, req *hellogrpc.Req) (res *hellogrpc.Res, err error) {
 //	fmt.Println(req.GetMessage())
 //	return &hellogrpc.Res{Message: "Hello,gRPC Response"}, nil
 //}
 //
-//func main() {
+//function main() {
 //	l, _ := net.Listen("tcp", ":8888")
 //	s := grpc.NewServer()
 //	hellogrpc.RegisterHelloGRPCServer(s, &server{})

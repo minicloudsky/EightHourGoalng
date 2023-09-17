@@ -4,7 +4,7 @@ import "fmt"
 
 type Human struct {
 	name string
-	sex string
+	sex  string
 }
 
 func (this *Human) Eat() {
@@ -33,7 +33,7 @@ func (this *SuperMan) Print() {
 	fmt.Println("level = ", this.level)
 }
 
-// func main() {
+// function main() {
 // 	h := Human{"zhangsan", "female"}
 // 	h.Eat()
 // 	h.Walk()

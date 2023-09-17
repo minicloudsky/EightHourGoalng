@@ -2,12 +2,12 @@ package main
 
 import "fmt"
 
-func deferFunc() int{
-	fmt.Println("defer func called...")
+func deferFunc() int {
+	fmt.Println("defer function called...")
 	return 0
 }
 
-func returnFunc() int{
+func returnFunc() int {
 	fmt.Println("return Func called...")
 	return 0
 }
@@ -16,7 +16,6 @@ func returnAndDefer() int {
 	defer deferFunc()
 	return returnFunc() // 先调用 return,后调用defer
 }
-
 
 func main() {
 	// 写入 defer 关键字
@@ -30,14 +29,14 @@ func main() {
 	returnAndDefer()
 }
 
-// func fun1(){
+// function fun1(){
 // 	fmt.Println("fun1")
 // }
 
-// func fun2(){
+// function fun2(){
 // 	fmt.Println("fun2")
 // }
 
-// func fun3(){
+// function fun3(){
 // 	fmt.Println("fun3")
 // }
